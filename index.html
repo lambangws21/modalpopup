@@ -1,0 +1,40 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal PopUp</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/59dfb27d04.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section>
+      <button class="show-modal">Show Modal</button>
+      <span class="overlay"></span>
+      <div class="modal-box">
+        <i class="fa-regular fa-circle-check"></i>
+        <h2>Completed</h2>
+        <h3>You have completed the task!</h3>
+
+        <!-- <div class="buttons">
+          <button class="close-btn">Ok, Close!</button>
+          <button>Open File</button>
+        </div> -->
+      </div>
+    </section>
+    <script>
+      const section = document.querySelector("section"),
+        overlay = document.querySelector(".overlay"),
+        showBtn = document.querySelector(".show-modal");
+      showBtn.addEventListener("click", () => section.classList.add("active"));
+      overlay.addEventListener("click", () =>
+        section.classList.remove("active")
+      );
+    </script>
+  </body>
+</html>
